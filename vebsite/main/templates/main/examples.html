@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Примеры домашней работы
+{% endblock %}
+
+{% block content %}
+    <h1> Выполнить новое задание</h1>
+    <form method="post">
+        <input type="text" placeholder="Введите описание выполняемых действий" class="form-control"><br>
+        <textarea type="text" placeholder="Прикрепите файл" class="form-control"></textarea><br>
+        <button type="submit" class="btn btn-success">Отправить на проверку</button>
+    </form>
+{% endblock %}
