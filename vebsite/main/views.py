@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from . models import Task
+from . forms import TaskForm
 
 def index(request):
     tasks = Task.objects.order_by('title')
@@ -12,9 +13,15 @@ def about_us(request):
 
 
 def create(request):
-    return render(request, 'main/create.html')
+    form = TaskForm()
+    context = {'form': form}
+    return render(request, 'main/create.html', context)
 
 
 def examples(request):
-    return render(request,'main/examples.html')
+    form = TaskForm()
+    context = {'form': form}
+    return render(request, 'main/examples.html', context)
+
+
 # Create your views here.
