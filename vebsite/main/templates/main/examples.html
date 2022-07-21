@@ -8,8 +8,8 @@
     <h1> Выполнить новое задание</h1>
     <form method="post">
         {% csrf_token %}
-           <input type="text" placeholder="Введите описание выполняемых действий" class="form-control"><br>
-        <textarea type="text" placeholder="Прикрепите файл" class="form-control"></textarea><br>
+        {{ form.title }}<br>
+        {{ form.task }}<br>
         <button type="submit" class="btn btn-success">Отправить на проверку</button>
     </form>
 {% endblock %}
